@@ -1,0 +1,193 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #ffffff, #ffffff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* ====== APP CONTAINER ====== */
+.app {
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 16px;
+    background: linear-gradient(180deg, #4ad5ff 0%, #008dff 100%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== TOP BAR ====== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ====== WEATHER ICON ====== */
+.weather-icon img {
+    width: 80%;         /* ширина 80% от контейнера .weather-icon */
+    max-width: 200px;   /* максимальный размер */
+    height: auto;       /* сохраняем пропорции */
+    display: block;
+    margin: 0 auto;
+}
+
+/* ====== TEMPERATURE ====== */
+.temperature {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ====== DESCRIPTION ====== */
+.description {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+/* ====== STATS PANEL ====== */
+.stats {
+    margin: 18px 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    backdrop-filter: blur(8px);
+}
+
+.stat {
+    text-align: center;
+    font-size: 15px;
+}
+
+/* ====== TODAY SECTION ====== */
+.today-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    padding: 12px;
+    backdrop-filter: blur(8px);
+    margin-bottom: 18px;
+}
+
+.today-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.today-item {
+    width: 65px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ====== NEXT FORECAST ====== */
+.next-forecast {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    padding: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.next-day {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* ====== SEARCH BAR ====== */
+.search {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.search input {
+    flex: 1;
+    padding: 11px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search button {
+    padding: 11px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    color: #008dff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search button:hover {
+    background: #f0f0f0;
+}
+
+.today-item img {
+    width: 50px;
+    height: 50px;
+}
+#show-all-btn {
+    display: block; /* по умолчанию видна через JS */
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+#show-all-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bell {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Всплывающее окно */
+.weather-popup {
+    position: absolute;
+    top: 40px; /* чуть ниже колокольчика */
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: none; /* скрыто по умолчанию */
+    width: 180px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 10;
+}
