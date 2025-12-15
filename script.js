@@ -1,4 +1,4 @@
-const apiKey = "my api key";
+const apiKey = "65a5cc8fc198573c1d647ec199cfec0f";
 // не публикую публично
 
 // Элементы управления
