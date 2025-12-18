@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/images (4).png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app">
 
-    <!-- Верхняя панель -->
     <div class="top-bar">
         <div class="location">
             <span class="icon">📍</span>
@@ -19,19 +22,16 @@
         <div class="bell" id="bell">🔔</div>
     </div>
 
-    <!-- Всплывающее окно для колокольчика -->
     <div class="weather-popup" id="weather-popup">
         <p id="popup-city">Город</p>
         <p id="popup-temp">Температура: --°</p>
         <p id="popup-desc">Описание: --</p>
     </div>
 
-    <!-- Иконка погоды -->
     <div class="weather-icon">
         <img id="weather-icon-img" src="" alt="">
     </div>
 
-    <!-- Температура и описание -->
     <div class="temperature">
         <span id="temperature">--°</span>
     </div>
@@ -39,50 +39,34 @@
     <div class="description">
         <p id="description">Описание</p>
         <p class="minmax">
-            Max: <span id="max-temp">--</span>° | 
+            Max: <span id="max-temp">--</span>° |
             Min: <span id="min-temp">--</span>°
         </p>
     </div>
 
-    <!-- Статистика -->
     <div class="stats">
-        <div class="stat">
-            <span class="stat-icon">💧</span>
-            <span id="humidity">--%</span>
-        </div>
-        <div class="stat">
-            <span class="stat-icon">🌡</span>
-            <span id="pressure">-- hPa</span>
-        </div>
-        <div class="stat">
-            <span class="stat-icon">💨</span>
-            <span id="wind">-- м/с</span>
-        </div>
+        <div class="stat">💧 <span id="humidity">--%</span></div>
+        <div class="stat">🌡 <span id="pressure">-- hPa</span></div>
+        <div class="stat">💨 <span id="wind">-- м/с</span></div>
     </div>
 
-    <!-- Почасовой прогноз -->
     <div class="today-box">
         <h3>Today</h3>
         <div class="today-items" id="today-forecast"></div>
     </div>
 
-    <!-- Прогноз на следующие дни -->
     <div class="next-forecast">
         <h3>Next Forecast</h3>
         <div id="next-days"></div>
         <button id="show-all-btn">Показать все дни</button>
     </div>
 
-    <!-- Поиск города -->
     <div class="search">
         <input type="text" id="city-input" placeholder="Введите город">
         <button id="search-btn">Поиск</button>
     </div>
 
 </div>
-
-
-
 
 <script src="script.js"></script>
 </body>
